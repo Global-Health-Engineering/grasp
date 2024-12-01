@@ -4,15 +4,22 @@ import requests
 import json
 import time
 
-import machine
+
+from machine import UART, Pin, SoftI2C
+
 import utime
 
-import sdcard
+#Initialize the onboard LED as output
+led = machine.Pin(25,machine.Pin.OUT)
+# Toggle LED functionality
+def BlinkLED(timer_one):
+    led.toggle()
+# import sdcard
 
 # uart setting
 uart_port = 0
 uart_baute = 115200
-Pico_SIM7670E = machine.UART(uart_port, uart_baute)
+Pico_SIM7670E = UART(uart_port, uart_baute)
 
 
 HTTPINIT = "AT+HTTPINIT"
@@ -45,6 +52,17 @@ def send_at(cmd, back, timeout=1000):
     else:
         print(cmd + ' no responce')
 
+def at_test():
+    print("---------------------------SIM7080G AT TEST---------------------------")
+    while True:
+        try:
+            command_input = str(input('Please input the AT command,press Ctrl+C to exit:\000'))
+            send_at(command_input, 'OK', 2000)
+        except KeyboardInterrupt:
+            print('\n------Exit AT Command Test!------\r\n')
+            module_power()
+            print("------The module is power off!------\n")
+            break
 
 now = time.localtime()
 timestr = "{}-{}-{} {}:{}:{} +0100".format(now[0], now[1], now[2],now[3], now[4],now[5])
@@ -129,10 +147,13 @@ send_at(HTTPACTION_POST, 'OK')
 
 send_at(HTTPHEAD, 'OK')
 
-send_at("AT+HTTPTERM", "OK")
+# # send_at("AT+HTTPTERM", "OK")
+# timer_one = machine.Timer()
+# # Timer one initialization for on board blinking LED at 200mS interval
+# timer_one.init(freq=5, mode=machine.Timer.PERIODIC, callback=BlinkLED)
 
-print(type(myobj))
-
+# print(type(myobj))
+at_test()
 
 #  
 # x = requests.post(url, json = myobj)
