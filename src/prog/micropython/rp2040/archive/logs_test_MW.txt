@@ -1,0 +1,680 @@
+
+Welcome to minicom 2.8
+
+OPTIONS: I18n 
+Port /dev/serial0, 10:56:16
+
+Press CTRL-A Z for help on special keys
+
+AT
+OK
+AT+CGMS
+ERROR
+AT_CSCS?
+ERROR
+AT+CSCS?
++CSCS: "GSM"
+
+OK
+AT+CCOP?
+ERROR
+AT+CCOP
+ERROR
+AT+CPIN
+ERROR
+AT+CPIN?
++CPIN: READY
+
+OK
+AT+CGMM
+A7670E-FASE
+
+OK
+AT+CNSMOD
+ERROR
+AT+CNSMOD?
++CNSMOD: 0,8
+
+OK
+AT+CEREGEPS?
+ERROR
+AT
+OK
+AT+CSSN
+ERROR
+AT+CREG 
+OK
+AT+CREG?
++CREG: 0,1
+
+OK
+AT+COPS?
++COPS: 0,2,"65010",7
+
+OK
+AT+CMGS="Ok41791384875"
+ERROR
+AT+CMGS="+41791384875"
+> 
+testmsg
++CMS ERROR: Network timeout
+AT
+OK
+AT+CMGS="+265981216817"
+> 
+hello
++CMGS: 1
+
+OK
+
++CMTI: "SM",2
+
++CMTI: "SM",3
+AT+CMGS="+265981220876"
+> 
+test876
++CMGS: 2
+
+OK
+
++CMTI: "SM",4
+AT+PING
+ERROR
+[D[C[D
++CGEV: NW PDN DEACT 1
+
++CGEV: NW REATTACH
+
++CGEV: EPS PDN ACT 1
+AT
+OK
+AT+HTTPACTION=0
+ERROR
+AT+HTTPPARA="URL","https://httpbin.org/get"
+ERROR
+AT_HTTPINIT
+ERROR
+AT+HTTPINIT
+OK
+AT+HTTPPARA="URL","https://httpbin.org/get"
+OK
+AT+HTTPACTION=0
+OK
+
++HTTPACTION: 0,200,254
+AT+HTTPHEAD
++HTTPHEAD: 226
+HTTP/1.1 200 OK
+Date: Tue, 12 Nov 2024 10:24:17 GMT
+Content-Type: application/json
+Content-Length: 254
+Connection: keep-alive
+Server: gunicorn/19.9.0
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Credentials: true
+OK
+AT+CNMP=13
++HTTP_NONET_EVENT
+
++CGEV: NW PDN DEACT 1
+
+OK
+
++CGEV: ME DETACH
+AT+CGMS="+265981216817"
+ERROR
+AT+CNMP?
++CNMP: 13
+
+OK
+AT+CSMS?
++CSMS: 0,1,1,1
+
+OK
+AT+CSMP?
++CSMP: 17,167,0,0
+
+OK
+AT+CMGL
+ERROR
+AT+CMGL?
++CMS ERROR: Operation not allowed
+AT+CMGS=?
+OK
+AT+CMGS="+265981220876"
+> 
+test_gsm_only
++CMGS: 3
+
+OK
+
++CMTI: "SM",5
+AT+CMGR=5
++CMGR: "REC UNREAD","1<4;<9>5663","","24/11/12,12:35:59+8"
+Experience the fastest and most reliable internet with PaNet. Dial *301# to buy a PaNet bundle. Airtel. The Smartphone Network
+
+OK
+AT+CPSI?
++CPSI: GSM,Online,650-10,0x1C2,27023,9 PGSM 900,29,0,19-19
+
+OK
+AT+HTTPINIT
+OK
+AT+HTTPPARA="https://httpbin.org/get"
+ERROR
+AT+HTTPPARA="URL","https://httpbin.org/get"
+OK
+AT+HTTPACTION=0
+OK
+AT+HTTPHEAD
++CME ERROR: AT command timeout
+
++HTTPACTION: 0,200,256
+
++HTTPHEAD: 226
+HTTP/1.1 200 OK
+Date: Tue, 12 Nov 2024 10:40:48 GMT
+Content-Type: application/json
+Content-Length: 256
+Connection: keep-alive
+Server: gunicorn/19.9.0
+Access-Control-Allow-Origin: *
+ATcess-Control-Allow-Credentials: trueAJTTPHEAD
+OK
+AT+HTTPHEAD
+ERROR
+AT&V
+&C: 1; &D: 0; &F: 0; &W: 0; E: 1; Q: 0; V: 1; X: 1; Z: 0; S0: 0; S2: 43; S3: 13; S4: 10; S5: 8; S6: 2; S7: 1; S8: 2; S9: 6; S10: 7; S11: 63; S30: 10; +FCLASS 
+
+OK
+AT+COPS?
++COPS: 0,2,"65010",3
+
+OK
+
+#################
+
+Welcome to minicom 2.8
+
+OPTIONS: I18n 
+Port /dev/serial0, 10:56:16
+
+Press CTRL-A Z for help on special keys
+
+AT
+OK
+AT+CGMS
+ERROR
+AT_CSCS?
+ERROR
+AT+CSCS?
++CSCS: "GSM"
+
+OK
+AT+CCOP?
+ERROR
+AT+CCOP
+ERROR
+AT+CPIN
+ERROR
+AT+CPIN?
++CPIN: READY
+
+OK
+AT+CGMM
+A7670E-FASE
+
+OK
+AT+CNSMOD
+ERROR
+AT+CNSMOD?
++CNSMOD: 0,8
+
+OK
+AT+CEREGEPS?
+ERROR
+AT
+OK
+AT+CSSN
+ERROR
+AT+CREG 
+OK
+AT+CREG?
++CREG: 0,1
+
+OK
+AT+COPS?
++COPS: 0,2,"65010",7
+
+OK
+AT+CMGS="Ok41791384875"
+ERROR
+AT+CMGS="+41791384875"
+> 
+testmsg
++CMS ERROR: Network timeout
+AT
+OK
+AT+CMGS="+265981216817"
+> 
+hello
++CMGS: 1
+
+OK
+
++CMTI: "SM",2
+
++CMTI: "SM",3
+AT+CMGS="+265981220876"
+> 
+test876
++CMGS: 2
+
+OK
+
++CMTI: "SM",4
+AT+PING
+ERROR
+[D[C[D
++CGEV: NW PDN DEACT 1
+
++CGEV: NW REATTACH
+
++CGEV: EPS PDN ACT 1
+AT
+OK
+AT+HTTPACTION=0
+ERROR
+AT+HTTPPARA="URL","https://httpbin.org/get"
+ERROR
+AT_HTTPINIT
+ERROR
+AT+HTTPINIT
+OK
+AT+HTTPPARA="URL","https://httpbin.org/get"
+OK
+AT+HTTPACTION=0
+OK
+
++HTTPACTION: 0,200,254
+AT+HTTPHEAD
++HTTPHEAD: 226
+HTTP/1.1 200 OK
+Date: Tue, 12 Nov 2024 10:24:17 GMT
+Content-Type: application/json
+Content-Length: 254
+Connection: keep-alive
+Server: gunicorn/19.9.0
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Credentials: true
+OK
+AT+CNMP=13
++HTTP_NONET_EVENT
+
++CGEV: NW PDN DEACT 1
+
+OK
+
++CGEV: ME DETACH
+AT+CGMS="+265981216817"
+ERROR
+AT+CNMP?
++CNMP: 13
+
+OK
+AT+CSMS?
++CSMS: 0,1,1,1
+
+OK
+AT+CSMP?
++CSMP: 17,167,0,0
+
+OK
+AT+CMGL
+ERROR
+AT+CMGL?
++CMS ERROR: Operation not allowed
+AT+CMGS=?
+OK
+AT+CMGS="+265981220876"
+> 
+test_gsm_only
++CMGS: 3
+
+OK
+
++CMTI: "SM",5
+AT+CMGR=5
++CMGR: "REC UNREAD","1<4;<9>5663","","24/11/12,12:35:59+8"
+Experience the fastest and most reliable internet with PaNet. Dial *301# to buy a PaNet bundle. Airtel. The Smartphone Network
+
+OK
+AT+CPSI?
++CPSI: GSM,Online,650-10,0x1C2,27023,9 PGSM 900,29,0,19-19
+
+OK
+AT+HTTPINIT
+OK
+AT+HTTPPARA="https://httpbin.org/get"
+ERROR
+AT+HTTPPARA="URL","https://httpbin.org/get"
+OK
+AT+HTTPACTION=0
+OK
+AT+HTTPHEAD
++CME ERROR: AT command timeout
+
++HTTPACTION: 0,200,256
+
++HTTPHEAD: 226
+HTTP/1.1 200 OK
+Date: Tue, 12 Nov 2024 10:40:48 GMT
+Content-Type: application/json
+Content-Length: 256
+Connection: keep-alive
+Server: gunicorn/19.9.0
+Access-Control-Allow-Origin: *
+ATcess-Control-Allow-Credentials: trueAJTTPHEAD
+OK
+AT+HTTPHEAD
+ERROR
+AT&V
+&C: 1; &D: 0; &F: 0; &W: 0; E: 1; Q: 0; V: 1; X: 1; Z: 0; S0: 0; S2: 43; S3: 13; S4: 10; S5: 8; S6: 2; S7: 1; S8: 2; S9: 6; S10: 7; S11: 63; S30: 10; +FCLASS 
+
+OK
+AT+COPS?
++COPS: 0,2,"65010",3
+
+OK
+AT+HTTPPARA="URL","https://reqbin.com/echo"
+OK
+AT+HTTPACTION=0
+OK
+AT
++HTTPACTION: 0,713,0
+AT+HTTPHEAD
++CME ERROR: unknown error
+AT+HTTPHEAD
+ERROR
+AT+HTTPACTION=0
+OK
+
++HTTPACTION: 0,715,0
+AT+HTTPHEAD
+ERROR
+AT+CMEE
+OK
+AT+HTTPHEAD
+ERROR
+AT+CMEE=?
++CMEE: (0-2)
+
+OK
+AT+CMEE?
++CMEE: 2
+
+OK
+AT+CMEE=2         
+OK
+AT+HTTPPARA?
+ERROR
+AT+HTTPINIT
+ERROR
+AT
+OK
+AT+AT 
+ERROR
+AT+httpterm
+OK
+AT+httpinit
+OK
+at+httppara="URL","https://google.com"
+OK
+at+httpaction=0
+OK
+at+http
++HTTPACTION: 0,301,220
+head
++HTTPHEAD: 608
+HTTP/1.1 301 Moved Permanently
+Location: https://www.google.com/
+Content-Type: text/html; charset=UTF-8
+Content-Security-Policy-Report-Only: object-src 'none';base-uri 'self';script-src 'nonce-F7nxXrGnaaUGvoAOR7eM6Q' 'strict-dynamic' 'report-sample' 'unsafe-evap
+Date: Tue, 12 Nov 2024 11:14:33 GMT
+Expires: Thu, 12 Dec 2024 11:14:33 GMT
+Cache-Control: public, max-age=2592000
+Server: gws
+Content-Length: 220
+X-XSS-Protection: 0
+X-Frame-Options: SAMEORIGIN
+Alt-Svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+OK
+at+httpread
+ERROR
+at+httpread?
++HTTPREAD: LEN,220
+
+OK
+at+httppara="URL","https://api.chucknorris.io/jokes/random"
+OK
+at+httpaction=0
+OK
+
++HTTPACTION: 0,715,0
+at+httphead?
+ERROR
+at+httpaction=2
+OK
+
++HTTPACTION: 2,715,0
+ATtpara="url","http://numbersapi.com/42"
+OK
+AT+httppara="url","http://numbersapi.com/42"
+ERROR
+AT+httppara="URL","http://numbersapi.com/42"
+OK
+at+httpaction=0
+OK
+
++HTTPACTION: 0,200,167
+at+httpread
+ERROR
+at+httphead?
+ERROR
+at+httphead
++HTTPHEAD: 482
+HTTP/1.1 200 OK
+Server: nginx/1.4.6 (Ubuntu)
+Date: Tue, 12 Nov 2024 11:07:57 GMT
+Content-Type: text/plain; charset=utf-8
+Content-Length: 167
+Connection: keep-alive
+X-Powered-By: Express
+Access-Control-Allow-Origin: *
+X-Numbers-API-Number: 42
+X-Numbers-API-Type: trivia
+Pragma: no-cache
+Cache-Control: no-cache
+Expires: 0
+ETag: W/"a7-k6RkHFdDTfrsV/Lg7C5AVbndAuI"
+Last-Modified: 1731409677
+Cache-Control: no-store, no-cache, must-revalidate, proxy-revalidate, max-age=0
+OK
+at+httpread?
++HTTPREAD: LEN,167
+
+OK
+AT+HTTPREAD=0,167
+OK
+
++HTTPREAD: 167
+42 is the result given by the web search engines Google, Wolfram Alpha and Bing when the query "the answer to life the universe and everything" is entered as.
++HTTPREAD: 0
+at+httppara="https://api.math.tools/nu             
+ERROR
+at+httppara="URL","https://api.math.tools/numbers/nod"
+OK
+at+httpaction=0
+OK
+
++HTTPACTION: 0,713,0
+AT+httpaction=0
+OK
+
++HTTPACTION: 0,200,5086
+AT+HTTPHEAD
++HTTPHEAD: 503
+HTTP/1.1 200 OK
+Server: nginx/1.14.0 (Ubuntu)
+Date: Tue, 12 Nov 2024 11:28:36 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 5086
+Connection: keep-alive
+Vary: Accept-Encoding
+Vary: Accept
+X-Auth-Status: true
+X-RateLimit-Limit: 10 per hour
+X-RateLimit-Remaining: 10
+Cache-Control: private, max-age=43200, pre-check=86400, post-check=43200
+Expires: Tue, 12 Nov 2024 23:28:36 GMT
+X-Powered-By: Luracast Restler v3.0.0rc3
+Content-Language: en
+Access-Control-Allow-Origin: *
+OK
+AT+SSLCFG
+ERROR
+AT+httppara="URL","https://ee-tik-vm057.ethz.ch/DEER/data/new"
+OK
+at+httpaction=0
+OK
+
++HTTPACTION: 0,713,0
+at+httpaction=0
+OK
+
++HTTPACTION: 0,715,0
+AT+httpaction=0
+OK
+
++HTTPACTION: 0,715,0
+at+httpaction=1
+OK
+
++HTTPACTION: 1,715,0
+at+httpaction=0
+OK
+
++HTTPACTION: 0,715,0
+AT+HTTPACTION
+ERROR
+at+httpaction=0
+OK
+
++HTTPACTION: 0,715,0
+AT+CSSLCFG?
++CSSLCFG: 0,4,0,1,300,"","","","",0
++CSSLCFG: 1,4,0,1,300,"","","","",0
++CSSLCFG: 2,4,0,1,300,"","","","",0
++CSSLCFG: 3,4,0,1,300,"","","","",0
++CSSLCFG: 4,4,0,1,300,"","","","",0
++CSSLCFG: 5,4,0,1,300,"","","","",0
++CSSLCFG: 6,4,0,1,300,"","","","",0
++CSSLCFG: 7,4,0,1,300,"","","","",0
++CSSLCFG: 8,4,0,1,300,"","","","",0
++CSSLCFG: 9,4,0,1,300,"","","","",0
+
+OK
+AT
+OK
+AT+CSSLCFG?
++CSSLCFG: 0,4,0,1,300,"","","","",0
++CSSLCFG: 1,4,0,1,300,"","","","",0
++CSSLCFG: 2,4,0,1,300,"","","","",0
++CSSLCFG: 3,4,0,1,300,"","","","",0
++CSSLCFG: 4,4,0,1,300,"","","","",0
++CSSLCFG: 5,4,0,1,300,"","","","",0
++CSSLCFG: 6,4,0,1,300,"","","","",0
++CSSLCFG: 7,4,0,1,300,"","","","",0
++CSSLCFG: 8,4,0,1,300,"","","","",0
++CSSLCFG: 9,4,0,1,300,"","","","",0
+
+OK
+AT+CNMP=2          
++HTTP_NONET_EVENT
+
+OK
+
++CGEV: ME DETACH
+
++CGEV: EPS PDN ACT 1
+AT+CNMP?
++CNMP: 2
+
+OK
+AT+CSQ
++CSQ: 20,99
+
+OK
+AT_CGREG?
+ERROR
+AT+CGREG?
++CGREG: 0,1
+
+OK
+AT+CREG?
++CREG: 0,1
+
+OK
+AT+CEREG?
++CEREG: 0,1
+
+OK
+AT+CEREG
+OK
+AT+CNMP?
++CNMP: 2
+
+OK
+AT+CNSMOD
+ERROR
+AT+CNSMOD?
++CNSMOD: 0,8
+
+OK
+AT+CNMP=13
++CGEV: NW PDN DEACT 1
+
+OK
+
++CGEV: ME DETACH
+AT+CNSMOD?
++CNSMOD: 0,1
+
+OK
+AT+CNMP=2
+OK
+
++CGEV: ME DETACH
+
++CGEV: EPS PDN ACT 1
+AT+HTTPINIT
+OK
+AT+HTTPPARA="URL","https://google.com"
+OK
+at+httpaction=0
+OK
+
++HTTPACTION: 0,301,220
+at+httppara="URL","https://ee-tik-vm057.ethz.ch/DEER/data/new/"
+OK
+at+httpaction=0
+OK
+
++HTTPACTION: 0,715,0
+at
+OK
+AT
+OK
+
+
+

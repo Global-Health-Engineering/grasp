@@ -33,9 +33,7 @@ HTTPACTION = "AT+HTTPACTION=0"
 HTTPHEAD = "AT+HTTPHEAD"
 
 HTTPTERM = "AT+HTTPTERM"
-# Connection: keep-alive
-# Server: gunicorn/19.9.0
-# Access-Control-Allow-Origin: *
+
 # "200 OK" in str
 # AT+HTTPHEAD
 # +HTTPHEAD: 226
@@ -43,15 +41,18 @@ HTTPTERM = "AT+HTTPTERM"
 # Date: Tue, 12 Nov 2024 10:24:17 GMT
 # Content-Type: application/json
 # Content-Length: 254
+# Connection: keep-alive
+# Server: gunicorn/19.9.0
+# Access-Control-Allow-Origin: *
 # Access-Control-Allow-Credentials: true
 
 def logprint(msg, mode=0):
     if mode == 0:
         print(msg)
         logger.info(msg)
-    elif mode == 1:
+    elif mode = 1:
         print(msg)
-    elif mode == 2:
+    else mode = 2:
         logger.info(msg)
 
 
@@ -93,7 +94,7 @@ def read_lines():
         logprint('None read_line (no response)')
         return None
 
-def send_at(cmd, back, timeout=2):
+def sent_at(cmd, back, timeout=2):
     logprint(str.encode(cmd + "\r\n"))
     ser.write(str.encode(cmd + "\r\n"))
     
@@ -102,7 +103,7 @@ def send_at(cmd, back, timeout=2):
     resp = read_lines()
     if resp != None:
         for i in resp:
-            if back in i.decode():
+            if back in i:
                 return "back in response"
             else:
                 return "back not in response"
@@ -141,15 +142,12 @@ def setup():
     time.sleep(1)
 
     
-    send_at("AT+CNSMOD?", "OK")
+    send_at("AT+CBSMOD?", "OK")
     
     time.sleep(1)
 
-    send_at("AT+HTTPINIT", "OK")
 
 while True:
-    
-    send_at("AT+HTTPINIT", 'OK', timeout=5)
     
     #check and log values
     
@@ -162,7 +160,7 @@ while True:
     time.sleep(1)
 
     
-    send_at("AT+CNSMOD?", "OK")
+    send_at("AT+CBSMOD?", "OK")
     
     time.sleep(1)
     
@@ -173,13 +171,9 @@ while True:
     sensor = str(datetime.now().strftime("%d_%m_%Y_%H_%M_%S"))
     request_command = HTTPPARA + link_suff + f'sensor={sensor}&input={input_val}\"'
     
-    send_at(request_command, 'OK', timeout=5)
+    send_at(request_command, 'OK')
     
-    send_at(HTTPACTION, 'OK', timeout=15)
+    send_at(HTTPACTION, 'OK')
     
-    send_at(HTTPHEAD, 'OK', timeout=5)
-    
-    send_at("AT+HTTPTERM", 'OK', timeout=5)
-    
-    time.sleep(600)
+    send_at(HTTPHEAD, 'OK')
     
