@@ -1,4 +1,4 @@
-import smbus
+# import smbus
 import time
 import struct
 import serial
